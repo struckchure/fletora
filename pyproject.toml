@@ -1,10 +1,16 @@
 [project]
 name = "fletora"
-version = "0.1.0"
+version = "0.0.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "arel>=0.3.0",
-    "fastapi[standard]>=0.115.8",
-]
+dependencies = ["arel>=0.3.0", "fastapi[standard]>=0.115.8"]
+license.file = "LICENSE"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["fletora"]
+license-files = []
