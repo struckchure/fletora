@@ -10,6 +10,17 @@ A sleek, futuristic name that feels fresh and unique.
 
 ---
 
+## Installation
+```
+pip install fletora
+```
+
+or using uv
+
+```
+uv add fletora
+```
+
 ## UV Setup Instructions
 
 ### 1. Install `uv` (if not already installed)
