@@ -34,6 +34,7 @@ jobs:
           commit_message: "build(pyproject.toml): bumps version to ${{ github.ref_name }}"
           branch: main
           file_pattern: "*.toml"
+          skip_checkout: true
 
       - name: Build Package
         run: uv build --package fletora
