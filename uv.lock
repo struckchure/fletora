@@ -133,8 +133,8 @@ standard = [
 
 [[package]]
 name = "fletora"
-version = "0.1.0"
-source = { virtual = "." }
+version = "0.0.0"
+source = { editable = "." }
 dependencies = [
     { name = "arel" },
     { name = "fastapi", extra = ["standard"] },
