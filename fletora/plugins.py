@@ -11,15 +11,6 @@ def spa_plugin(child: t):
             t(
                 "script",
                 """
-                    // WebSocket for listening to file changes
-                    const socket = new WebSocket("ws://localhost:8000/ws");
-
-                    socket.onmessage = function(event) {
-                        if (event.data === "reload") {
-                            location.reload();  // Reload the page if a change is detected
-                        }
-                    };
-
                     document.addEventListener('click', function(event) {
                         // Check if the clicked element is a link (<a> tag)
                         let target = event.target.closest("a");
