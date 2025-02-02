@@ -32,7 +32,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "build(pyproject.toml): bumps version to ${{ github.ref_name }}"
-          branch: $(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+          branch: main
           file_pattern: "*.toml"
 
       - name: Build Package
