@@ -3,7 +3,7 @@ import uvicorn
 from fletora import App
 from fletora import Tag as t
 
-app = App()._app  # if you are using FastAPI CLI
+app = App()._app
 route = App().page
 
 
