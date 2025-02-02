@@ -35,10 +35,12 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit and push version update
+        env:
+          DEFAULT_BRANCH: $(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
         run: |
           git add pyproject.toml
           git commit -m "build(pyproject.toml): bumps version to ${{ github.ref_name }}"
-          git push origin HEAD
+          git push origin HEAD:$DEFAULT_BRANCH
 
       - name: Build Package
         run: uv build --package fletora
